@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-family: Verdana, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -17,6 +17,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.466);
+    z-index: 999;
 }
 .wrap-img{
     width: 30%;
@@ -35,27 +36,127 @@ nav{
 
 }
 
+.wrap-links a{
+    text-decoration: none;
+    color: rgb(194, 65, 56);
+    font-weight: bold;
+    transition:all 200ms ease-in-out;
+}
+.wrap-links a:hover{
+    text-decoration: underline;
+    color: #b16d6d;
+}
+
+
 .logo{
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
 }
 
 #s1{
-    background-color: red;
     min-height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.right{
+    width: 400px;
+}
+
+.wrap-banner{
+    border-radius: 20px;
+    overflow: hidden;
+    width: 400px;
+    height: auto;
+}
+.wrap-banner img{
+    width: 400px;
+    height: auto;
+    filter: grayscale(60%);
+    transition: all 200ms ease-in-out;
+}
+
+.wrap-banner img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.right h1{
+    font-size: 40px;
+    width: 100%;
+
+}
+
+.right p{
+    width: 18px;
+    width: 100%;
 }
 
 #s2{
-    background-color: blue;
     min-height: 100vh;
+    padding-top: 80px;
 }
 
 #s3{
-    background-color: green;
     min-height: 100vh;
+    padding-top: 80px;
 }
 
 #s4{
-    background-color: yellow;
     min-height: 100vh;
+    padding-top: 80px;
+}
+
+@media (width <= 768px){
+    nav{
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 15px;
+    }
+
+    .wrap-links a{
+        text-align: center;
+    }
+    #s1, #s2, #s3, #s4{
+        padding: 50px;
+        min-height: 50vh;
+        height: auto;
+    }
+    #s1{
+        flex-direction: column;
+        padding-top: 140px ;
+    }
+    .left{
+    width: 100%;
+}
+
+.right p{
+    padding-top: 10px;
+}
+
+.right{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+.wrap-banner{
+    width: 250px;
+    height: 350;
+}
+.wrap-banner img{
+    width: 250px;
+    height: 300px;
+}
+
+
 }
